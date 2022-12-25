@@ -1,0 +1,81 @@
+:root{
+    --color-dark:#2f3e46;
+    --color-light:#84a98c;
+
+    /* --color-dark:#14213d;
+    --color-light:#fca311; */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* para definir estilo de las listas */
+    list-style: none; 
+    /* La propiedad CSS user-select controla si el usuario puede seleccionar el texto.*/
+    user-select: none;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Open Sans', sans-serif;
+}
+ nav {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+    height: 100px;
+    border-radius: 16px;
+    background-color: var(--color-dark);
+ }
+
+ nav .nav-list{
+    display: flex;
+ }
+
+ nav .nav-item{
+    /* Se usa comúnmente para establecer la distancia entre líneas de texto. */
+    line-height: 95px;  
+ }
+
+ .btn{
+    cursor: pointer;
+    padding: 16px 24px;
+    border-radius: 8px;
+ }
+
+ input {
+    display: none;
+ }
+
+ .btn .btn-icon{
+    color: var(--color-light);
+    transform: translateX(100%);
+    transition:all .4s;
+ }
+
+ .btn .btn-text {
+    color: #202020;
+    font-size: 22px;
+    font-weight: 700;
+    opacity: 0;
+    transition: all .2s;
+ }
+
+ input:checked ~ .btn{
+    cursor: default;
+    background-color: var(--color-light);
+ }
+ input:checked ~ .btn .btn-icon{
+    color: var(--color-dark);
+    transform: translateX(-5px);
+ }
+ input:checked ~ .btn .btn-text{
+    opacity: 1;
+    transform: translateX(20px);
+    transition-delay: .2s;
+ }
